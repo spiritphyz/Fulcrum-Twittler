@@ -10,4 +10,4 @@ Several helper libraries were used to achieve the visual components of the spec:
  * [Font Awesome](https://github.com/FortAwesome/Font-Awesome) glyphs, [Google Fonts](https://fonts.google.com/) typefaces
  * [Moment.js](https://github.com/moment/moment) for relative times
 
-Twittler is the capstone project of Hack Reactor Fulcrum.
+Twittler is the capstone project of [Hack Reactor Fulcrum](http://fulcrum.reactorcore.com/).
