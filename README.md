@@ -9,3 +9,5 @@ Several helper libraries were used to achieve the visual components of the spec:
  * [Jdenticon](https://github.com/dmester/jdenticon) and [js-md5](https://github.com/emn178/js-md5) for custom user avatars
  * [Font Awesome](https://github.com/FortAwesome/Font-Awesome) glyphs, [Google Fonts](https://fonts.google.com/) typefaces
  * [Moment.js](https://github.com/moment/moment) for relative times
+
+ Twittler is the capstone project of Hack Reactor Fulcrum.
