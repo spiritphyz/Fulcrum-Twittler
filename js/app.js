@@ -102,20 +102,18 @@ cancelUpdateTweetCounter();
 
 /* behavior ---------------------------------------------------- */
 $(document).ready(function() {
-  // Define class
-  var MasterBird = function(stream) {
-    stream = stream || streams.home;
-    var instance = Object.create(MasterBird.prototype);
-    instance.sourceStream = stream;
-    return instance;
+  // Define model class in pseudoclassical style
+  // http://www.ryanatkinson.io/javascript-instantiation-patterns/
+  var Bird = function(stream) {
+    this.sourceStream = stream || streams.home;
   };
 
   // Set up helper functions
-  MasterBird.prototype.clearWall = function() {
+  Bird.prototype.clearWall = function() {
     $('#tweetWall').html('');
   };
 
-  MasterBird.prototype.tweetToWall = function() {
+  Bird.prototype.tweetToWall = function() {
     var source = this.sourceStream;
     var tweet = this.tweetObj;
     var $tweetMsg;
@@ -180,7 +178,7 @@ $(document).ready(function() {
     $tweetSection.fadeIn(800);
   };
 
-  MasterBird.prototype.printAllTweets = function(start, finish) {
+  Bird.prototype.printAllTweets = function(start, finish) {
     // Since tweetToWall() adds tweets at the top position,
     // this effectively shows tweets in reverse chronological order.
     var source = this.sourceStream;
@@ -193,10 +191,10 @@ $(document).ready(function() {
     }
   };
 
-  // Define subclasses
+  // Define instances
   streams.users.visitor = [];
-  var visitorBird = MasterBird(streams.users.visitor);
-  var userBird = MasterBird();
+  var visitorBird = new Bird(streams.users.visitor);
+  var userBird = new Bird();
 
   // Print first wall of tweets
   userBird.printAllTweets();
